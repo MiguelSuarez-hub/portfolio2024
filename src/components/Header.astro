@@ -1,0 +1,17 @@
+---
+import LinkItem from "./LinkItem.astro";
+import ThemeButton from "./ThemeButton.astro";
+import LanguageButton from "./LanguageButton.astro";
+---
+
+<header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
+  <nav class="flex bg-white/10 rounded-full border-white/15 backdrop-blur gap-4 max-w-xl">
+    <LinkItem text="Home" href="#home" />
+    <LinkItem text="Experience" href="#experience" />
+    <LinkItem text="Projects" href="#" />
+    <LinkItem text="About" href="#" />
+    <LinkItem text="Contact" href="#" />
+    <ThemeButton />
+    <LanguageButton />
+  </nav>
+</header>

@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+import memoji from "../../public/memoji.png";
+import Badge from "./Badge.astro";
+import LinkCard from "./LinkCard.astro";
+import Frame from "./Frame.astro";
+import Logo from "./icons/Logo.astro";
+---
+
+<div class="flex items-center justify-between">
+  <div class="flex flex-col items-start gap-y-8">
+    <h1 class="font-bold text-3xl">Hey, I'm Miguel Suarez</h1>
+    <a
+      href="https://www.linkedin.com/in/miguel-suarez-1805"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Let's work together</Badge>
+    </a>
+    <div>
+      <p>
+        Mechatronic Engineer, Software developer. <br /> +2 years of experience,
+        located in Bogotá, Colombia.<br /> I look forward to creating exceptional
+        web experiences together.
+      </p>
+    </div>
+    <div class="flex items-center gap-5">
+      <LinkCard text="LinkedIn" />
+      <LinkCard text="Github" />
+    </div>
+  </div>
+  <div class="flex flex-col items-center gap-y-5">
+    <Frame>
+      <Image src={memoji} width={200} height={200} alt="emoji de Miguel" />
+    </Frame>
+    <div class="flex">
+      <Logo />
+      <h2 class="">
+        MAS Dev |
+        <span class="text-cyan-500"> Web Development</span>
+      </h2>
+    </div>
+  </div>
+</div>

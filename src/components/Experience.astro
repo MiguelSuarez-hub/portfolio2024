@@ -1,0 +1,42 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Feb 2021 - Feb 2022",
+    job: "Automation engineer intern",
+    company: "OI-Peldar",
+    description:
+      "Development and improvement of programs for siemens plcs, Development of programs in excel with vba, connection between excel and SAP, report automation, powerbi integration, Creation of flows in powerautomate.",
+  },
+  {
+    date: "Mar 2022 - Mar 2023",
+    job: "Training engineer",
+    company: "OI-Peldar",
+    description:
+      "Training for the position of quality coordinator, Developing software tools for data recording and visualization with powerapps and powerautomate, analyzing production data for quality assurance",
+  },
+  {
+    date: "Sep 2023 - Now",
+    job: "Integration and software developer",
+    company: "Moovia",
+    description:
+      "Developing frontend and backend solutions for different projects, using tools as React, Java, python and django, and deploy those solutions in the AWS cloud.",
+  },
+];
+---
+
+<div class="">
+  <h2 class="text-2xl font-bold">Experience</h2>
+  <ol
+    class="relative my-16 h-full flex items-start gap-x-10 before:absolute before:bottom-[-35px] before:block before:w-full before:border-b-2 before:border-cyan-500 before:content-['']"
+  >
+    {
+      EXPERIENCE.map((experience) => (
+        <li class="">
+          <ExperienceItem {...experience} />
+        </li>
+      ))
+    }
+  </ol>
+</div>

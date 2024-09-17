@@ -1,0 +1,17 @@
+---
+import Github from "./icons/Github.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+const { text } = Astro.props;
+---
+
+<a
+  href={text === "LinkedIn"
+    ? "https://www.linkedin.com/in/miguel-suarez-1805"
+    : "https://github.com/MiguelSuarez-hub"}
+  target="_blank"
+  rel="noopener"
+  class="flex items-center justify-center gap-1 text-cyan-500 py-1 px-3 border border-cyan-500 rounded-xl hover:text-cyan-600 hover:border-cyan-600 hover:scale-105"
+>
+  {text === "LinkedIn" ? <LinkedIn /> : <Github />}
+  {text}
+</a>

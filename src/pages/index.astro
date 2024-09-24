@@ -1,6 +1,7 @@
 ---
 import Experience from "../components/Experience.astro";
 import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -10,8 +11,11 @@ import Layout from "../layouts/Layout.astro";
     <SectionContainer id="home" class="py-16 md:py-36">
       <Hero />
     </SectionContainer>
-    <SectionContainer id="experience" class="py-24 md:py-24">
+    <SectionContainer id="experience" class="pb-24">
       <Experience />
+    </SectionContainer>
+    <SectionContainer id="projects" class="pb-24">
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>

@@ -1,0 +1,92 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+import skulls from "../../public/projects/skulls.webp";
+
+const projects = [
+  {
+    title: "Skulls and Bombs",
+    image: skulls,
+    githref: "https://github.com/MiguelSuarez-hub/videogame-javascript",
+    webhref: "https://timely-nasturtium-ee7c17.netlify.app/",
+    description:
+      "Website developed using advanced HTML, CSS and JavaScript, where you have a maze game, with different levels and functionalities.",
+    stack: [
+      { text: "HTML", color: "text-red-600" },
+      { text: "JS", color: "text-yellow-500" },
+      { text: "CSS", color: "text-blue-400" },
+    ],
+  },
+  {
+    title: "Portfolio 2023",
+    image: skulls,
+    githref: "https://github.com/MiguelSuarez-hub/videogame-javascript",
+    webhref: "https://timely-nasturtium-ee7c17.netlify.app/",
+    description:
+      "Website developed using advanced HTML, CSS and JavaScript, where you have a maze game, with different levels and functionalities.",
+    stack: [
+      { text: "Next.js", color: "text-black dark:text-white" },
+      { text: "JS", color: "text-yellow-500" },
+      { text: "CSS", color: "text-blue-400" },
+    ],
+  },
+  {
+    title: "Portfolio 2023",
+    image: skulls,
+    githref: "https://github.com/MiguelSuarez-hub/videogame-javascript",
+    webhref: "https://timely-nasturtium-ee7c17.netlify.app/",
+    description:
+      "Website developed using advanced HTML, CSS and JavaScript, where you have a maze game, with different levels and functionalities.",
+    stack: [
+      { text: "Next.js", color: "text-black dark:text-white" },
+      { text: "JS", color: "text-yellow-500" },
+      { text: "CSS", color: "text-blue-400" },
+    ],
+  },
+  {
+    title: "Portfolio 2023",
+    image: skulls,
+    githref: "https://github.com/MiguelSuarez-hub/videogame-javascript",
+    webhref: "https://timely-nasturtium-ee7c17.netlify.app/",
+    description:
+      "Website developed using advanced HTML, CSS and JavaScript, where you have a maze game, with different levels and functionalities.",
+    stack: [
+      { text: "Next.js", color: "text-black dark:text-white" },
+      { text: "JS", color: "text-yellow-500" },
+      { text: "CSS", color: "text-blue-400" },
+    ],
+  },
+  {
+    title: "Portfolio 2023",
+    image: skulls,
+    githref: "https://github.com/MiguelSuarez-hub/videogame-javascript",
+    webhref: "https://timely-nasturtium-ee7c17.netlify.app/",
+    description:
+      "Website developed using advanced HTML, CSS and JavaScript, where you have a maze game, with different levels and functionalities.",
+    stack: [
+      { text: "Next.js", color: "text-black dark:text-white" },
+      { text: "JS", color: "text-yellow-500" },
+      { text: "CSS", color: "text-blue-400" },
+    ],
+  },
+  {
+    title: "Portfolio 2023",
+    image: skulls,
+    githref: "https://github.com/MiguelSuarez-hub/videogame-javascript",
+    webhref: "https://timely-nasturtium-ee7c17.netlify.app/",
+    description:
+      "Website developed using advanced HTML, CSS and JavaScript, where you have a maze game, with different levels and functionalities.",
+    stack: [
+      { text: "Next.js", color: "text-black dark:text-white" },
+      { text: "JS", color: "text-yellow-500" },
+      { text: "CSS", color: "text-blue-400" },
+    ],
+  },
+];
+---
+
+<div class="">
+  <h2 class="text-2xl font-bold">Projects</h2>
+  <div class="grid gap-4 sm:grid-cols-1 md:gap-6 lg:grid-cols-3 lg:gap-10 pt-8">
+    {projects.map((project) => <ProjectItem {...project} />)}
+  </div>
+</div>

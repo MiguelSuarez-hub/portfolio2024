@@ -6,17 +6,8 @@ import CSS from "./icons/CSS.astro";
 import Next from "./icons/Next.astro";
 
 const { title, image, githref, webhref, description, stack } = Astro.props;
-
-// const stackIcons = {
-//   html: {icon: <Html />, color: "text-red-400"}
-// }
 ---
 
-<!-- <div class="flex flex-row">
-  <h3>{title}</h3>
-  <Image src={image} alt={title}/>
-  <p>{description}</p>
-</div> -->
 <article
   class="overflow-hidden group dark:border-zinc-600 rounded-lg border border-slate-100 bg-white shadow-lg dark:bg-gray-900 dark:shadow-gray-700 shadow-teal-300 relative flex flex-col justify-between"
 >
@@ -29,10 +20,10 @@ const { title, image, githref, webhref, description, stack } = Astro.props;
     />
   </div>
   <div class="flex flex-col p-2 sm:p-4">
-    <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200">
+    <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">
       {title}
     </h3>
-    <p class="text-md font-normal text-gray-800 dark:text-gray-200">
+    <p class="text-sm font-normal text-gray-800 dark:text-gray-200">
       {description}
     </p>
   </div>
@@ -41,7 +32,15 @@ const { title, image, githref, webhref, description, stack } = Astro.props;
       {
         stack.map((tech: { text: string; color: string }) => (
           <p class={`flex gap-x-2 ${tech.color}`}>
-            {tech.text === "HTML" ? <Html /> : tech.text === "JS" ? <JS />: tech.text === "CSS" ? <CSS /> : tech.text === "Next.js" && <Next />}
+            {tech.text === "HTML" ? (
+              <Html />
+            ) : tech.text === "JS" ? (
+              <JS />
+            ) : tech.text === "CSS" ? (
+              <CSS />
+            ) : (
+              tech.text === "Next.js" && <Next />
+            )}
             {tech.text}
           </p>
         ))

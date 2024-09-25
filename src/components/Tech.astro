@@ -1,0 +1,13 @@
+---
+const { position, line } = Astro.props;
+---
+
+<div class={`absolute ${position} flex items-center before:absolute before:${line}-[-35px] before:block before:w-full before:border-b-2 before:border-cyan-500 before:content-[''] after:absolute after:left-[35px] after:rotate-45 after:block after:h-full after:border-l-2 after:border-cyan-500 after:content-['']`}>
+  <span class="relative inline-flex overflow-hidden rounded-full p-[1px]">
+    <div
+      class="inline-flex items-center justify-center size-24 px-3 py-1 text-base text-green-800 bg-green-100 rounded-full dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap"
+    >
+      <slot />
+    </div>
+  </span>
+</div>

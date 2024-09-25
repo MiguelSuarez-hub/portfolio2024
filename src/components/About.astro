@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import memoji from "../../public/memoji.png";
+import Tech from "../components/Tech.astro";
+---
+
+<div class="">
+  <h2 class="text-2xl font-bold">About</h2>
+  <div class="flex gap-x-5 pt-8">
+    <div class="flex flex-col items-start justify-start gap-y-3 w-full">
+      <p class="">
+        Hey! My name is Miguel Suarez, and I am a passionate Frontend Developer
+        hailing from the vibrant city of Bogota. At the age of 26, I have
+        dedicated myself to the world of programming, with a particular focus on
+        crafting exceptional user experiences through frontend development.
+      </p>
+      <p class="text-left text-md">
+        With a strong foundation in{" "}
+        <span class="text-cyan-600 font-bold">React</span>,{" "}
+        <b class="text-yellow-400">JavaScript</b>, and{" "}
+        <span class="text-[#3178C6] font-bold">Typescript</span>, I possess a
+        keen understanding of modern web technologies. I am well-versed in
+        building interactive and dynamic web applications that bring ideas to
+        life. Additionally, my expertise extends to frameworks like <b
+          >Next.js</b
+        >, <b>Angular</b> and <b>Astro</b>, which allow me to create performant
+        and scalable applications with ease.
+      </p>
+      <p>
+        I am excited about the endless possibilities that technology brings, and
+        I am thrilled to be part of the frontend development community. If you
+        have any projects or opportunities where my skills can make a
+        difference, please don&apos;t hesitate to reach out. I look forward to
+        creating exceptional web experiences together!
+      </p>
+    </div>
+    <div class="relative w-full">
+      <!-- <Tech>
+        <Image src={memoji} width={80} height={80} alt="emoji de Miguel" />
+      </Tech> -->
+      <Tech position="top-2 left-20" line="right">
+        <Image
+          src={memoji}
+          width={80}
+          height={80}
+          alt="emoji de Miguel"
+          loading="lazy"
+        />
+      </Tech>
+    </div>
+  </div>
+</div>

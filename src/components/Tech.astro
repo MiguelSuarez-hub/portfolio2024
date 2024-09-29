@@ -1,11 +1,18 @@
 ---
-const { position, line } = Astro.props;
+interface Props {
+  position: string;
+  line: string;
+  containerSize: string;
+}
+const { position, line, containerSize } = Astro.props;
 ---
 
-<div class={`absolute ${position} flex items-center before:absolute before:${line}-[-35px] before:block before:w-full before:border-b-2 before:border-cyan-500 before:content-[''] after:absolute after:left-[35px] after:rotate-45 after:block after:h-full after:border-l-2 after:border-cyan-500 after:content-['']`}>
-  <span class="relative inline-flex overflow-hidden rounded-full p-[1px]">
+<div
+  class={`absolute ${position} flex items-center ${line}`}
+>
+  <span class="relative inline-flex rounded-full p-[1px] z-10">
     <div
-      class="inline-flex items-center justify-center size-24 px-3 py-1 text-base text-green-800 bg-green-100 rounded-full dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap"
+      class={`inline-flex items-center justify-center ${containerSize === "big" ? "size-24" : containerSize === "medium" ? "size-16" : "size-10"} px-3 py-1 rounded-full dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap`}
     >
       <slot />
     </div>

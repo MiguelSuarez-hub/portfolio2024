@@ -1,7 +1,171 @@
 ---
 import { Image } from "astro:assets";
 import memoji from "../../public/memoji.png";
+import html from "../../public/techs/html.png";
+import css from "../../public/techs/css.png";
+import js from "../../public/techs/js.png";
+import ts from "../../public/techs/ts.webp";
+import react from "../../public/techs/react.png";
+import node from "../../public/techs/node.png";
+import tailwind from "../../public/techs/tailwind.png";
+import python from "../../public/techs/python.webp";
+import django from "../../public/techs/django.png";
+import next from "../../public/techs/next.png";
+import astro from "../../public/techs/astro.png";
+import angular from "../../public/techs/angular.png";
+import postgre from "../../public/techs/postgre.webp";
+import aws from "../../public/techs/aws.png";
+import docker from "../../public/techs/docker.png";
+import git from "../../public/techs/git.png";
 import Tech from "../components/Tech.astro";
+
+interface TechProps {
+  position: string;
+  line: string;
+  image: typeof Image;
+  alt: string;
+  size: number;
+  containerSize: "big" | "medium" | "";
+}
+
+const techs = [
+  {
+    position: "top-10 left-2",
+    line: "",
+    image: memoji,
+    alt: "emoji de Miguel",
+    size: 80,
+    containerSize: "big",
+  },
+  {
+    position: "top-40 left-6",
+    line: "before:absolute before:-top-6 before:left-8 before:block before:h-1/2 before:border-l-2 before:border-cyan-500 before:content-[''] after:absolute after:-right-12 after:bottom-4 after:rotate-12 after:block after:w-full after:border-t-2 after:border-cyan-500 after:content-['']",
+    image: html,
+    alt: "html logo",
+    size: 54,
+    containerSize: "medium",
+  },
+  {
+    position: "top-14 left-32",
+    line: "before:absolute before:-left-6 before:block before:w-1/2 before:border-t-2 before:border-cyan-500 before:content-['']",
+    image: css,
+    alt: "css logo",
+    size: 54,
+    containerSize: "medium",
+  },
+  {
+    position: "top-32 left-24",
+    line: "before:absolute before:-left-3 before:top-2 before:rotate-45 before:block before:w-1/2 before:border-t-2 before:border-cyan-500 before:content-['']",
+    image: js,
+    alt: "js logo",
+    size: 54,
+    containerSize: "medium",
+  },
+  {
+    position: "top-32 left-[184px]",
+    line: "before:absolute before:-left-6 before:block before:w-1/2 before:border-t-2 before:border-cyan-500 before:content-['']",
+    image: ts,
+    alt: "ts logo",
+    size: 36,
+    containerSize: "medium",
+  },
+  {
+    position: "top-14 left-[216px]",
+    line: "before:absolute before:-left-6 before:block before:w-1/2 before:border-t-2 before:border-cyan-500 before:content-['']",
+    image: tailwind,
+    alt: "tailwind logo",
+    size: 54,
+    containerSize: "medium",
+  },
+  {
+    position: "top-48 left-[128px]",
+    line: "before:absolute before:left-2 before:top-4 before:rotate-45 before:block before:w-1/2 before:border-t-2 before:border-cyan-500 before:content-[''] after:absolute after:right-2 after:top-4 after:-rotate-45 after:block after:w-1/2 after:border-t-2 after:border-cyan-500 after:content-['']",
+    image: react,
+    alt: "react logo",
+    size: 54,
+    containerSize: "big",
+  },
+  {
+    position: "top-60 left-6",
+    line: "before:absolute before:-right-6 before:top-6 before:-rotate-45 before:block before:w-1/2 before:border-t-2 before:border-cyan-500 before:content-['']",
+    image: next,
+    alt: "next logo",
+    size: 54,
+    containerSize: "big",
+  },
+  {
+    position: "bottom-4 left-10",
+    line: "",
+    image: astro,
+    alt: "astro logo",
+    size: 54,
+    containerSize: "medium",
+  },
+  {
+    position: "top-40 right-24",
+    line: "before:absolute before:-left-3 before:top-6 before:rotate-45 before:block before:w-1/2 before:border-t-2 before:border-cyan-500 before:content-['']",
+    image: angular,
+    alt: "angular logo",
+    size: 54,
+    containerSize: "big",
+  },
+  {
+    position: "top-10 right-10",
+    line: "",
+    image: node,
+    alt: "node logo",
+    size: 54,
+    containerSize: "medium",
+  },
+  {
+    position: "top-28 right-2",
+    line: "",
+    image: postgre,
+    alt: "postgre logo",
+    size: 54,
+    containerSize: "medium",
+  },
+  {
+    position: "bottom-2 left-32",
+    line: "",
+    image: git,
+    alt: "git logo",
+    size: 54,
+    containerSize: "big",
+  },
+  {
+    position: "bottom-24 left-52",
+    line: "",
+    image: docker,
+    alt: "docker logo",
+    size: 54,
+    containerSize: "medium",
+  },
+  {
+    position: "bottom-2 left-60",
+    line: "",
+    image: aws,
+    alt: "aws logo",
+    size: 54,
+    containerSize: "big",
+  },
+  {
+    position: "bottom-32 right-20",
+    line: "",
+    image: python,
+    alt: "python logo",
+    size: 100,
+    containerSize: "medium",
+  },
+  {
+    position: "bottom-20 right-6",
+    line: "before:absolute before:-left-3 before:top-2 before:rotate-45 before:block before:w-1/2 before:border-t-2 before:border-cyan-500 before:content-['']",
+    image: django,
+    alt: "django logo",
+    size: 54,
+    containerSize: "medium",
+  },
+];
 ---
 
 <div class="">
@@ -35,18 +199,24 @@ import Tech from "../components/Tech.astro";
       </p>
     </div>
     <div class="relative w-full">
-      <!-- <Tech>
-        <Image src={memoji} width={80} height={80} alt="emoji de Miguel" />
-      </Tech> -->
-      <Tech position="top-2 left-20" line="right">
-        <Image
-          src={memoji}
-          width={80}
-          height={80}
-          alt="emoji de Miguel"
-          loading="lazy"
-        />
-      </Tech>
+      <h3 class="text-xl font-bold">Tech Stack</h3>
+      {
+        techs.map((tech) => (
+          <Tech
+            position={tech.position}
+            line={tech.line}
+            containerSize={tech.containerSize}
+          >
+            <Image
+              src={tech.image}
+              width={tech.size}
+              height={tech.size}
+              alt={tech.alt}
+              loading="lazy"
+            />
+          </Tech>
+        ))
+      }
     </div>
   </div>
 </div>

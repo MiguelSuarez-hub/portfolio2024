@@ -19,15 +19,6 @@ import docker from "../../public/techs/docker.png";
 import git from "../../public/techs/git.png";
 import Tech from "../components/Tech.astro";
 
-interface TechProps {
-  position: string;
-  line: string;
-  image: typeof Image;
-  alt: string;
-  size: number;
-  containerSize: "big" | "medium" | "";
-}
-
 const techs = [
   {
     position: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",

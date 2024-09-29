@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import Html from "./icons/Html.astro";
 import JS from "./icons/JS.astro";
 import CSS from "./icons/CSS.astro";
@@ -12,7 +11,7 @@ const { title, image, githref, webhref, description, stack } = Astro.props;
   class="overflow-hidden group dark:border-zinc-600 rounded-lg border border-slate-100 bg-white shadow-lg dark:bg-gray-900 dark:shadow-gray-700 shadow-teal-300 relative flex flex-col justify-between"
 >
   <div class="h-44 w-full relative">
-    <Image
+    <img
       src={image}
       alt={title}
       loading="lazy"

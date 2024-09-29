@@ -1,10 +1,16 @@
 ---
 interface Props {
   text: string;
-  href:string
+  href: string;
+  target?: boolean;
 }
 
-const { text, href } = Astro.props;
+const { text, href, target = false } = Astro.props;
 ---
 
-<a href={href} class="px-3 py-1 rounded-full text-white/70 text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300" >{text}</a>
+<a
+  href={href}
+  target={target ? "_blank" : null}
+  class="px-3 py-1 rounded-full text-white/70 text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300"
+  >{text}</a
+>

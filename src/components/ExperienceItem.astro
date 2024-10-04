@@ -4,17 +4,17 @@ const { job, company, date, description } = Astro.props;
 
 <li class="group h-44 w-60">
   <span
-    class="text-white -bottom-[54px] absolute rounded-full text-5xl md:group-hover:animate-ping md:group-hover:animate-infinite"
+    class="text-black dark:text-white -bottom-[54px] absolute rounded-full text-5xl md:group-hover:animate-ping md:group-hover:animate-infinite"
     >&bull;</span
   >
   <div class="flex flex-col items-start gap-y-2">
-    <p class="text-sm text-white">{date}</p>
-    <h3 class="text-base font-bold text-white">{job}</h3>
-    <h4 class="font-semibold text-sm text-white">
+    <p class="text-sm text-black dark:text-white">{date}</p>
+    <h3 class="text-base font-bold text-black dark:text-white">{job}</h3>
+    <h4 class="font-semibold text-sm text-black dark:text-white">
       {company}
     </h4>
     <p
-      class="md:group-hover:inline md:hidden text-white max-w-60 text-xs text-pretty md:animate-in md:fade-in md:duration-700"
+      class="md:group-hover:inline md:hidden text-black dark:text-white max-w-60 text-xs text-pretty md:animate-in md:fade-in md:duration-700"
     >
       {description}
     </p>

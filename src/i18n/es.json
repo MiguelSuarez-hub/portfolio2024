@@ -1,0 +1,9 @@
+{
+  "header" : {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  }
+}
